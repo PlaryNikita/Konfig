@@ -152,7 +152,30 @@ User@DESKTOP-System-Product-Name:~/Desktop/configa$ ./6.sh
 Файл ./test.py не содержит комментарий в первой строке.
 ```
 
+# Задача 10
+Написать программу, которая выводит названия всех пустых текстовых файлов в указанной директории. Директория передается в программу параметром.
+## Код
+```bash
+#!/bin/bash
 
+# Проверка аргументов
+if [ "$#" -ne 1 ]; then
+    echo "Использование: $0 <директория>"
+    exit 1
+fi
+
+directory=$1
+
+# Поиск пустых текстовых файлов
+find "$directory" -type f -empty -print
+```
+```bash
+User@DESKTOP-AT7C2D2 MINGW64 ~/desktop ./10.sh test
+test/3.js
+test/1.py
+test/1ff
+test/2.py
+```
 
 
 
