@@ -45,11 +45,30 @@ awk '{print $2, $1}' /etc/protocols | sort -nr | head -n 5
 ```
 ```bash
 awk '{print $2, $1}' /etc/protocols | sort -nr | head -n 5
-localhost:~# awk '{print $2, $1}' /etc/protocols |sort -nr | head -n 5
 103 pim
 98 encap
 94 ipip
 89 ospf
 81 vmtp
+```
+# Задача 3
+Написать программу banner средствами bash для вывода текстов, как в следующем примере (размер баннера должен меняться!):
+## Код
+```bash
+#!/bin/bash
+
+text=$*
+length=${#text}
+
+for i in $(seq 1 $((length + 2))); do
+    line+="-"
+done
+
+echo "+${line}+"
+echo "| ${text} |"
+echo "+${line}+"
+```
+
+
 
 
