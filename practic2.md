@@ -1,7 +1,7 @@
 ## Задача 1
 Вывести служебную информацию о пакете matplotlib (Python). Разобрать основные элементы содержимого файла со служебной информацией из пакета. Как получить пакет без менеджера пакетов, прямо из репозитория?
 ```bash
-(venv) C:\Users\lordp\OneDrive\Рабочий стол\confupr\task_2>pip3 show matplotlib
+(venv) C:\Users\User\Desktop\configa\task_2>pip3 show matplotlib
 Name: matplotlib
 Version: 3.9.2
 Summary: Python plotting package
@@ -10,7 +10,7 @@ Author: John D. Hunter, Michael Droettboom
 Author-email: Unknown <matplotlib-users@python.org>
 License: License agreement for matplotlib versions 1.3.0 and later
 =========================================================
-Location: C:\Users\lordp\OneDrive\Рабочий стол\confupr\task_2\venv\Lib\site-packages
+Location: C:\Users\User\Desktop\configa\task_2\venv\Lib\site-packages
 Requires: contourpy, cycler, fonttools, kiwisolver, numpy, packaging, pillow, pyparsing, python-dateutil
 Required-by:
 ```
@@ -36,7 +36,7 @@ dist
 .tarball: https://registry.npmjs.org/express/-/express-4.21.0.tgz
 .shasum: d57cb706d49623d4ac27833f1cbc466b668eb915
 .integrity: sha512-VqcNGcj/Id5ZT1LZ/cfihi3ttTn+NJmkli2eZADigjq29qTlWi/hAQ43t/VLPq8+UX06FCEx3ByOYet6ZFblng==
-.unpackedSize: 220.8 kB
+.unpackedSize: 219.4 kB
 
 dependencies:
 accepts: ~1.3.8            cookie: 0.6.0              finalhandler: 1.3.1        parseurl: ~1.3.3
