@@ -227,3 +227,18 @@ BNF = '''E = ( E ) | { E } | () | {}'''
 for i in range(10):
     print(_generate_phrase(parse_bnf(BNF), start='E'))
 ```
+## Вывод
+```
+((()))
+{{}}
+()
+{}
+{}
+{}
+{}
+{{(())}}
+({})
+(())
+
+Process finished with exit code 0
+```
