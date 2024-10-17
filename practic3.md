@@ -242,3 +242,49 @@ for i in range(10):
 
 Process finished with exit code 0
 ```
+## Задача 5
+Язык выражений алгебры логики.
+```python
+import random
+
+def parse_bnf(text):
+    ```
+    Преобразовать текстовую запись БНФ в словарь.
+    ```  
+    grammar = {}
+    rules = [line.split('=') for line in text.strip().split('\n')]
+    for name, body in rules:
+        grammar[name.strip()] = [alt.split() for alt in body.split('|')]
+    return grammar
+
+def generate_phrase(grammar, start):
+    ```
+    Сгенерировать случайную фразу.
+    ```
+    if start in grammar: 
+      seq = random.choice(grammar[start])
+      phrase = ''
+      for name in seq:
+          phrase += generate_phrase(grammar, name)
+      return phrase
+    return str(start)
+
+BNF = '''E = x | y | E & E | E | E | ( E ) | ~ E'''
+
+for i in range(10):
+    print(generate_phrase(parse_bnf(BNF), start: 'E'))
+```
+## Вывод
+```python
+x
+(x)
+(y)
+y
+((~(y)&~x&x))
+~x
+x
+(y&(~y))
+y
+x
+Process finished with exit code 0
+```
