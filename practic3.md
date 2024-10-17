@@ -75,4 +75,32 @@ local Person(age, group, name) = {
   "subject": "Конфигурационное управление"
 }
 ```
+## Задача 2
+Реализовать на Dhall приведенный ниже пример в формате JSON. Использовать в реализации свойство программируемости и принцип DRY.
+```bash
+let List/generate = https://prelude.dhall-lang.org/v1
+let groups = List/generate 24 Text
+    (\(n : Natural) ->
+    "ИКБО-${Natural/show (n + 1)}-20"
+    )
+let person =
+    \(name : Text) ->
+    \(age : Natural) ->
+    \(group : Natural) ->
+    {
+        name = name,
+        age = age,
+        group = "ИКБО-${Natural/show group}-20"
+    }
 
+in {
+    groups
+    ,students = [
+      person("Иванов И.И", 19, 4),
+      person("Петров П.П.", 18, 5),
+      person("Сидоров С.С.", 18, 5),
+      person("Головач Н.Е.", 19, 63)
+    ]
+    ,subject = "Конфигурационное управление"
+}
+```
