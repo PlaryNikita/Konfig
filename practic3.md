@@ -21,7 +21,7 @@ local Person(age, group, name) = {
 }
 ```
 
-##Вывод:
+## Вывод:
 ```bash
 {
   "groups": [
@@ -104,7 +104,7 @@ in {
     ,subject = "Конфигурационное управление"
 }
 ```
-##Вывод:
+## Вывод:
 ```bash
 groups:
   - "ИКБО-1-20"
@@ -179,8 +179,18 @@ BNF = '''E = 0 E | 1 E | 0 | 1'''
 for i in range(10):
     print(generate_phrase(parse_bnf(BNF), start='E'))
 ```
-##Вывод:
+## Вывод:
 
 ```python
+0
+01
+0
+00
+110
+0
+1
+1
+10
+11
 Process finished with exit code 0
 ```
