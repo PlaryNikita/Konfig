@@ -180,3 +180,7 @@ for i in range(10):
     print(generate_phrase(parse_bnf(BNF), start='E'))
 ```
 ##Вывод:
+
+```python
+Process finished with exit code 0
+```
