@@ -1,4 +1,6 @@
-
+## Задача 1
+Реализовать на Jsonnet приведенный ниже пример в формате JSON. Использовать в реализации свойство программируемости и принцип DRY.
+```bash
 local arr = std.makeArray(25, function(x) "MKBO-" + (x + 1) + "-24");
 
 local Person(age, group, name) = {
