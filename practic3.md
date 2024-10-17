@@ -195,4 +195,35 @@ for i in range(10):
 
 Process finished with exit code 0
 ```
-## Задача 3
+## Задача 4
+Язык правильно расставленных скобок двух видов.
+```python
+import random
+
+def parse_bnf(text):
+    ```
+    Преобразовать текстовую запись БНФ в словарь.
+    ```  
+    grammar = {}
+    rules = [Line.split('=') for Line in text.strip().split('\n')]
+    for name, body in rules:
+        grammar[name.strip()] = [alt.split() for alt in body.split('|')]
+    return grammar
+
+def _generate_phrase(grammar, start):
+    ```
+    Сгенерировать случайную фразу.
+    ```
+    if start in grammar:
+        seq = random.choice(grammar[start])
+        phrase = ''
+        for name in seq:
+            phrase += _generate_phrase(grammar, name)
+        return phrase
+    return str(start)
+
+BNF = '''E = ( E ) | { E } | () | {}'''
+
+for i in range(10):
+    print(_generate_phrase(parse_bnf(BNF), start='E'))
+```
