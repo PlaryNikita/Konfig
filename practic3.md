@@ -148,4 +148,34 @@ subject: "Конфигурационное управление"
 
 ```
 ## Задача 3
+Реализовать грамматики, описывающие следующие языки (для каждого решения привести БНФ). Код решения должен содержаться в переменной BNF. 
 ```bash
+import random
+
+def parse_bnf(text):
+    ```
+
+    ```
+    grammar = {}
+    rules = [line.split('=') for line in text.strip().split('\n')]
+    for name, body in rules:
+        grammar[name.strip()] = [alt.split() for alt in body.split('|')]
+    return grammar
+
+def generate_phrase(grammar, start):
+    ```
+
+    ```
+    if start in grammar:
+        seq = random.choice(grammar[start])
+        phrase = ''
+        for name in seq:
+            phrase += generate_phrase(grammar, name)
+        return phrase
+    return str(start)
+
+BNF = '''E = 0 E | 1 E | 0 | 1'''
+
+for i in range(10):
+    print(generate_phrase(parse_bnf(BNF), start='E'))
+```
