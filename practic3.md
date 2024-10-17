@@ -10,11 +10,11 @@ local Person(age, group, name) = {
 {
   groups: arr,
   students: [
-    Person(19, 4, 'MeaHos U.U'),
-    Person(18, 5, 'MeTtpos M.M.'),
-    Person(18, 5, 'Cugopos C.C.'),
-    Person(19, 11, 'KocTud M.H.'),
+    Person(19, 4, ''),
+    Person(18, 5, ''),
+    Person(18, 5, ''),
+    Person(19, 11, ''),
   ],
-  subject: "KoH¢urypaumoHHoe ynpasnexue",
+  subject: "",
 }
 ```
