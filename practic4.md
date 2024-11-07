@@ -1,6 +1,7 @@
 ### Задача 1
 На сайте https://onlywei.github.io/explain-git-with-d3 или http://git-school.github.io/visualizing-git/ (цвета могут отличаться, есть команды undo/redo) с помощью команд эмулятора git получить следующее состояние проекта (сливаем master с first, перебазируем second на master): см. картинку ниже. Прислать свою картинку.
-![alt text](pract.png)
+![image](https://github.com/user-attachments/assets/247fd685-2397-4b8d-9fef-d7fab41bd82e)
+
 
 ```bash
 git commit
