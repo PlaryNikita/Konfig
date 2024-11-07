@@ -52,7 +52,7 @@ commit c23cfce606b7c7238c74660da3d7984c6b71e8df (HEAD -> master)
 Author: Coder 1 <coder1@corp.com>
 Date:   Thu Nov 7 00:02:43 2024 +0300
 
-    new: добавлен файл prog.py
+new: добавлен файл prog.py
 ```
 
 ### Задача 4
