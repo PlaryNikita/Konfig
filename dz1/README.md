@@ -8,7 +8,7 @@ cd Konfig
 ## Запуск
 Запуск эмулятора
 ```bash
-cd dz1/src
+cd hw1/src
 python shell_emulator.py --username admin --vfs ../virtual_files.zip --log ../session_log.csv
 ```
 
