@@ -1,22 +1,22 @@
 ## Клонирование репозитория
 Склонируйте репозиторий с исходным кодом и тестами:
 ```bash
-git clone https://github.com/Narek9870/konfig
-cd konfig
+git clone https://github.com/PlaryNikita/Konfig
+cd Konfig
 ```
 
 ## Запуск
 Запуск эмулятора
 ```bash
-cd src/emulator-shell-os
+cd dz1/src
 python shell_emulator.py --username admin --vfs ../virtual_files.zip --log ../session_log.csv
 ```
 
 ## Структура проекта
 ```bash
 /src
-  shell_emulator.py
   commands.py
+  shell_emulator.py
   test_commands.py
 config.csv
 session_log.csv
